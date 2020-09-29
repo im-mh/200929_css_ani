@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+p{font-family: 'Comfortaa', cursive; font-size: 50px; text-align: center; margin-top:25px;}
+
+
+.top-box{width: 100%; height: calc(100% - 50%); background-color: white; display: flex; align-items: flex-start;}
+.bottom-box{width: 100%; height: calc(100% - 50%); background-color: #F5A9D7; display: flex; align-items: flex-end;}
+
+.box{
+	border-radius: 30px;
+	width:600px;
+	height: 600px;
+	background-color: white;
+	position: absolute;
+	top: calc(50% - 300px);
+	left: calc(50% - 300px);
+	box-shadow: 5px 5px 50px 5px rgba(0,0,0,0.2);}
+
+.small-box1{
+			border-radius: 100px;
+			width:100%; height: 100%; float: left;
+			animation-name: smallbox2;
+			animation-duration: 2s;
+			transition-property: all;
+			animation-play-state: paused;
+}
+.small-box1:hover{
+	transform: scale(0.8, 0.8);
+	animation-play-state: running;
+	border-radius: 100px;
+}
+
+@-webkit-keyframes smallbox2{
+	0% {opacity:1;}
+	
+	100% {opacity: 0;}
+}
+
+.small-box2{
+	border-radius: 100px;
+	width:100px; height: 100px; float: left; 
+	animation-name: smallbox; 
+	animation-duration: 0.2s;
+	/*animation-iteration-count: infinite;
+	animation: smallbox 3s ease-in-out infinite;
+	animation-fill-mode: forwards;*/
+	animation-timing-function: linear;
+	animation-play-state: paused;
+
+	background-color: brown;
+	transition-property: all;
+	transition-duration: 0.5s;
+	
+	}
+
+.small-box2:hover{
+	transform: rotate(720deg) scale(0.5, 0.5);
+	background-color: white;
+	animation-play-state: running;
+	border-radius: 10px;
+}
+
+@-webkit-keyframes smallbox {
+	0% {transform: rotate(0deg) scale(1, 1); opacity:0 }
+	50% {transform: rotate(180deg) scale(1.5, 1.5);}
+	100% {transform: rotate(360deg) scale(1, 1); opacity: 1;}
+}
